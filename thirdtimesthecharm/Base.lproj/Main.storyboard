@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ERP-ZR-ll6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--FaceMe-->
@@ -16,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2014-10-18 at 3.32.34 AM" translatesAutoresizingMaskIntoConstraints="NO" id="dqO-i1-xfj">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                </variation>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oig-dF-Rj3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
@@ -32,16 +27,8 @@
                                         <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="KrI-D1-iLU">
                                             <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </switch>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="Tv0-A9-67q">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MfT-7Z-MXb">
-                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="        ">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="tmB-zE-LWs">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wam-uD-xR1">
@@ -74,27 +61,74 @@
                                         </button>
                                     </barButtonItem>
                                 </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 </variation>
                             </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zh5-lJ-kbT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="knH-Ye-kSw">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="knH-Ye-kSw" id="sEK-bm-RAw">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rag-IE-D9f" kind="show" identifier="profile" id="Qpu-S5-KD5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="SrR-G4-1V0"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0uG-Wu-KWC"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Oig-dF-Rj3" firstAttribute="top" secondItem="Zh5-lJ-kbT" secondAttribute="bottom" id="P6S-kn-J83"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oig-dF-Rj3" secondAttribute="bottom" id="QIw-a7-8C4"/>
+                            <constraint firstItem="Zh5-lJ-kbT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iIl-7v-FqV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zh5-lJ-kbT" secondAttribute="trailing" id="rYt-Ah-Lcc">
+                                <variation key="widthClass=compact" constant="-16"/>
+                            </constraint>
+                            <constraint firstItem="Zh5-lJ-kbT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rvW-fR-gUt">
+                                <variation key="widthClass=compact" constant="-16"/>
+                            </constraint>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="dqO-i1-xfj"/>
                                 <exclude reference="Oig-dF-Rj3"/>
+                                <exclude reference="Zh5-lJ-kbT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="iIl-7v-FqV"/>
+                                <exclude reference="rYt-Ah-Lcc"/>
+                                <exclude reference="rvW-fR-gUt"/>
+                                <exclude reference="P6S-kn-J83"/>
+                                <exclude reference="QIw-a7-8C4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="dqO-i1-xfj"/>
                                 <include reference="Oig-dF-Rj3"/>
+                                <include reference="Zh5-lJ-kbT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="iIl-7v-FqV"/>
+                                <include reference="rYt-Ah-Lcc"/>
+                                <include reference="rvW-fR-gUt"/>
+                                <include reference="P6S-kn-J83"/>
+                                <include reference="QIw-a7-8C4"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="FaceMe" id="gsC-0m-5p0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="Zh5-lJ-kbT" id="0kl-1x-8zn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
