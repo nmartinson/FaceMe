@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ERP-ZR-ll6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -103,11 +104,11 @@
                                 <exclude reference="Zh5-lJ-kbT"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="QIw-a7-8C4"/>
+                                <exclude reference="P6S-kn-J83"/>
                                 <exclude reference="iIl-7v-FqV"/>
                                 <exclude reference="rYt-Ah-Lcc"/>
                                 <exclude reference="rvW-fR-gUt"/>
-                                <exclude reference="P6S-kn-J83"/>
-                                <exclude reference="QIw-a7-8C4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -116,11 +117,11 @@
                                 <include reference="Zh5-lJ-kbT"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="QIw-a7-8C4"/>
+                                <include reference="P6S-kn-J83"/>
                                 <include reference="iIl-7v-FqV"/>
                                 <include reference="rYt-Ah-Lcc"/>
                                 <include reference="rvW-fR-gUt"/>
-                                <include reference="P6S-kn-J83"/>
-                                <include reference="QIw-a7-8C4"/>
                             </mask>
                         </variation>
                     </view>
