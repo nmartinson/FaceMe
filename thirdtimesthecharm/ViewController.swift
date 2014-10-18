@@ -11,9 +11,7 @@ import UIKit
 class ViewController: UIViewController,NSURLConnectionDataDelegate,NSURLConnectionDelegate {
 	
 	@IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableView: UITableViewCell!
-    @IBOutlet weak var tableView: UITableViewCell!
+
 	var data = NSMutableData()  // Declare Globally
 	var selectedIndex = -1
 	var activityIndicator:UIActivityIndicatorView? = nil
