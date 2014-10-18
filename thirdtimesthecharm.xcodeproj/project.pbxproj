@@ -348,6 +348,7 @@
 				INFOPLIST_FILE = thirdtimesthecharm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -358,6 +359,7 @@
 				INFOPLIST_FILE = thirdtimesthecharm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -414,6 +416,7 @@
 				2ED16FA719F247ED007223AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2ED16FA819F247ED007223AA /* Build configuration list for PBXNativeTarget "thirdtimesthecharmTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +425,7 @@
 				2ED16FAA19F247ED007223AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
