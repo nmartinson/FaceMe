@@ -17,6 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zh5-lJ-kbT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="knH-Ye-kSw">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="knH-Ye-kSw" id="sEK-bm-RAw">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rag-IE-D9f" kind="show" identifier="profile" id="Qpu-S5-KD5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="SrR-G4-1V0"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0uG-Wu-KWC"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2014-10-18 at 3.32.34 AM" translatesAutoresizingMaskIntoConstraints="NO" id="Ko6-bu-FLo">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="-8" width="320" height="550"/>
+                                </variation>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oig-dF-Rj3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
@@ -61,66 +86,62 @@
                                         </button>
                                     </barButtonItem>
                                 </items>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                                </variation>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zh5-lJ-kbT">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="knH-Ye-kSw">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="knH-Ye-kSw" id="sEK-bm-RAw">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="rag-IE-D9f" kind="show" identifier="profile" id="Qpu-S5-KD5"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="SrR-G4-1V0"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0uG-Wu-KWC"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Oig-dF-Rj3" firstAttribute="top" secondItem="Zh5-lJ-kbT" secondAttribute="bottom" id="P6S-kn-J83"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oig-dF-Rj3" secondAttribute="bottom" id="QIw-a7-8C4"/>
-                            <constraint firstItem="Zh5-lJ-kbT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iIl-7v-FqV"/>
+                            <constraint firstItem="Oig-dF-Rj3" firstAttribute="top" secondItem="Zh5-lJ-kbT" secondAttribute="bottom" id="8jM-6o-bhp">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Zh5-lJ-kbT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ces-Z8-8HF">
+                                <variation key="widthClass=compact" constant="-64"/>
+                            </constraint>
+                            <constraint firstItem="Oig-dF-Rj3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cCZ-v2-i2B">
+                                <variation key="widthClass=compact" constant="-16"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="Zh5-lJ-kbT" secondAttribute="trailing" id="rYt-Ah-Lcc">
                                 <variation key="widthClass=compact" constant="-16"/>
                             </constraint>
                             <constraint firstItem="Zh5-lJ-kbT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rvW-fR-gUt">
                                 <variation key="widthClass=compact" constant="-16"/>
                             </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="Oig-dF-Rj3" secondAttribute="trailing" id="trz-cc-oLb">
+                                <variation key="widthClass=compact" constant="-16"/>
+                            </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oig-dF-Rj3" secondAttribute="bottom" id="znO-67-tZl">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Oig-dF-Rj3"/>
                                 <exclude reference="Zh5-lJ-kbT"/>
+                                <exclude reference="Ko6-bu-FLo"/>
+                                <exclude reference="Oig-dF-Rj3"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="QIw-a7-8C4"/>
-                                <exclude reference="P6S-kn-J83"/>
-                                <exclude reference="iIl-7v-FqV"/>
+                                <exclude reference="Ces-Z8-8HF"/>
                                 <exclude reference="rYt-Ah-Lcc"/>
                                 <exclude reference="rvW-fR-gUt"/>
+                                <exclude reference="8jM-6o-bhp"/>
+                                <exclude reference="cCZ-v2-i2B"/>
+                                <exclude reference="trz-cc-oLb"/>
+                                <exclude reference="znO-67-tZl"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Oig-dF-Rj3"/>
                                 <include reference="Zh5-lJ-kbT"/>
+                                <include reference="Ko6-bu-FLo"/>
+                                <include reference="Oig-dF-Rj3"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="QIw-a7-8C4"/>
-                                <include reference="P6S-kn-J83"/>
-                                <include reference="iIl-7v-FqV"/>
+                                <include reference="Ces-Z8-8HF"/>
                                 <include reference="rYt-Ah-Lcc"/>
                                 <include reference="rvW-fR-gUt"/>
+                                <include reference="8jM-6o-bhp"/>
+                                <include reference="cCZ-v2-i2B"/>
+                                <include reference="trz-cc-oLb"/>
+                                <include reference="znO-67-tZl"/>
                             </mask>
                         </variation>
                     </view>
