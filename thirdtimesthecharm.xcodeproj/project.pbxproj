@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E5BEDA619F28FE500CC60B7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA519F28FE500CC60B7 /* TableViewController.swift */; };
 		2E5BEDA819F2963A00CC60B7 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA719F2963A00CC60B7 /* ProfileController.swift */; };
+		2E5BEDAA19F2AAC700CC60B7 /* glyphicons_0_eye_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA919F2AAC700CC60B7 /* glyphicons_0_eye_open.png */; };
+		2E5BEDAC19F2B23000CC60B7 /* glyphicons_0_eye_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BEDAB19F2B23000CC60B7 /* glyphicons_0_eye_close.png */; };
 		2ED16F8B19F247ED007223AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED16F8A19F247ED007223AA /* AppDelegate.swift */; };
 		2ED16F8E19F247ED007223AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED16F8D19F247ED007223AA /* ViewController.swift */; };
 		2ED16F9119F247ED007223AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED16F8F19F247ED007223AA /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		2E5BEDA519F28FE500CC60B7 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		2E5BEDA719F2963A00CC60B7 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		2E5BEDA919F2AAC700CC60B7 /* glyphicons_0_eye_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glyphicons_0_eye_open.png; path = thirdtimesthecharm/Images.xcassets/glyphicons_051_eye_open.imageset/glyphicons_0_eye_open.png; sourceTree = "<group>"; };
+		2E5BEDAB19F2B23000CC60B7 /* glyphicons_0_eye_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glyphicons_0_eye_close.png; path = thirdtimesthecharm/Images.xcassets/glyphicons_052_eye_close.imageset/glyphicons_0_eye_close.png; sourceTree = "<group>"; };
 		2ED16F8219F247ED007223AA /* thirdtimesthecharm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thirdtimesthecharm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED16F8619F247ED007223AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ED16F8A19F247ED007223AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				2ED16F8419F247ED007223AA /* thirdtimesthecharm */,
 				2ED16F9E19F247ED007223AA /* thirdtimesthecharmTests */,
 				2ED16F8319F247ED007223AA /* Products */,
+				2E5BEDA919F2AAC700CC60B7 /* glyphicons_0_eye_open.png */,
+				2E5BEDAB19F2B23000CC60B7 /* glyphicons_0_eye_close.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,6 +206,8 @@
 			files = (
 				2ED16F9119F247ED007223AA /* Main.storyboard in Resources */,
 				2ED16F9619F247ED007223AA /* LaunchScreen.xib in Resources */,
+				2E5BEDAA19F2AAC700CC60B7 /* glyphicons_0_eye_open.png in Resources */,
+				2E5BEDAC19F2B23000CC60B7 /* glyphicons_0_eye_close.png in Resources */,
 				2ED16F9319F247ED007223AA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

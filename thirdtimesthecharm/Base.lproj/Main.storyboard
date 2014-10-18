@@ -45,7 +45,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oig-dF-Rj3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem enabled="NO" title="Random" style="done" id="pP4-ez-Bb6">
+                                    <barButtonItem enabled="NO" title="Random    " style="done" id="pP4-ez-Bb6">
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="9sZ-K2-13g">
@@ -53,6 +53,9 @@
                                             <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="randomSwitchChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aGB-Vd-Ura"/>
+                                            </connections>
                                         </switch>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="tmB-zE-LWs">
@@ -62,6 +65,9 @@
                                             <state key="normal" image="glyphicons_136_cogwheel">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="profilePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qzX-zd-NGs"/>
+                                            </connections>
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="5rO-S6-slD">
@@ -71,22 +77,30 @@
                                             <state key="normal" image="glyphicons_367_expand">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="notificationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="It6-Wg-rI5"/>
+                                            </connections>
                                         </button>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="DVY-jr-nbH">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pwE-PT-3GX">
-                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="glyphicons_051_eye_open">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <state key="disabled" image="glyphicons_052_eye_close"/>
-                                            <state key="selected" image="glyphicons_052_eye_close"/>
-                                            <state key="highlighted" image="glyphicons_052_eye_close"/>
-                                        </button>
+                                        <connections>
+                                            <action selector="noficationPressed:" destination="BYZ-38-t0r" id="08N-nA-8ti"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xet-1H-L5U">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="272" y="535" width="32" height="25"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MP5-gp-UQi" appends="YES" id="x6X-k2-x9u"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -117,6 +131,7 @@
                                 <exclude reference="Zh5-lJ-kbT"/>
                                 <exclude reference="Ko6-bu-FLo"/>
                                 <exclude reference="Oig-dF-Rj3"/>
+                                <exclude reference="xet-1H-L5U"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Ces-Z8-8HF"/>
@@ -133,6 +148,7 @@
                                 <include reference="Zh5-lJ-kbT"/>
                                 <include reference="Ko6-bu-FLo"/>
                                 <include reference="Oig-dF-Rj3"/>
+                                <include reference="xet-1H-L5U"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Ces-Z8-8HF"/>
@@ -148,17 +164,26 @@
                     <navigationItem key="navigationItem" title="FaceMe" id="gsC-0m-5p0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="randomLable" destination="pP4-ez-Bb6" id="Pas-U4-CCB"/>
+                        <outlet property="randomSwitch" destination="KrI-D1-iLU" id="g3g-MJ-fj1"/>
+                        <outlet property="randomToggle" destination="KrI-D1-iLU" id="pMe-d3-S3a"/>
                         <outlet property="tableView" destination="Zh5-lJ-kbT" id="1gv-rY-e0U"/>
+                        <outlet property="visibilityButton" destination="xet-1H-L5U" id="l3q-rB-A6O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MP5-gp-UQi">
+                    <connections>
+                        <action selector="visibilityButtonPressed:" destination="BYZ-38-t0r" id="ELL-xP-4IA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1056" y="147"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="8i6-fO-DX7">
             <objects>
-                <viewController id="rag-IE-D9f" customClass="ViewController" customModule="thirdtimesthecharm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rag-IE-D9f" customClass="ProfileController" customModule="thirdtimesthecharm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u9w-JM-GMr"/>
                         <viewControllerLayoutGuide type="bottom" id="WBf-V4-rX3"/>
@@ -199,9 +224,6 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="45" y="237" width="121" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="sendData:" destination="rag-IE-D9f" eventType="touchUpInside" id="2Hy-0X-Bw2"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -222,9 +244,16 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="1cm-pb-340">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" style="plain" id="Jpr-x6-r8e">
+                            <connections>
+                                <action selector="editPressed:" destination="rag-IE-D9f" id="Khe-Ou-Dae"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="sendButton" destination="qUZ-MO-SNb" id="tsq-hp-qPr"/>
+                        <outlet property="editLabel" destination="Jpr-x6-r8e" id="m9L-7G-Qy5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBg-TD-gM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -373,8 +402,6 @@
     <resources>
         <image name="FacebookLogoOfficialApril2013-150x150" width="136" height="139"/>
         <image name="Screen Shot 2014-10-18 at 3.32.34 AM" width="768" height="1018"/>
-        <image name="glyphicons_051_eye_open" width="31" height="17"/>
-        <image name="glyphicons_052_eye_close" width="31" height="24"/>
         <image name="glyphicons_136_cogwheel" width="24" height="24"/>
         <image name="glyphicons_367_expand" width="19" height="19"/>
     </resources>
