@@ -75,7 +75,7 @@
                                     </barButtonItem>
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 </variation>
                             </toolbar>
                         </subviews>
@@ -94,11 +94,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="FaceMe" id="gsC-0m-5p0"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.5" y="147.5"/>
+            <point key="canvasLocation" x="1056" y="147"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8i6-fO-DX7">
@@ -131,7 +131,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBg-TD-gM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,7 +161,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="140" y="75" width="94" height="30"/>
+                                    <rect key="frame" x="113" y="74" width="94" height="30"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrb-lW-W3B">
@@ -170,7 +170,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="46" y="209" width="89" height="21"/>
+                                    <rect key="frame" x="23" y="209" width="89" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lu0-fs-oNQ">
@@ -179,7 +179,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="46" y="250" width="81" height="21"/>
+                                    <rect key="frame" x="23" y="250" width="81" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfm-IB-UVd">
@@ -187,7 +187,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="143" y="206" width="182" height="30"/>
+                                    <rect key="frame" x="120" y="206" width="182" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pf7-JZ-Mvl">
@@ -195,9 +195,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="143" y="244" width="182" height="30"/>
+                                    <rect key="frame" x="120" y="244" width="182" height="30"/>
                                 </variation>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FacebookLogoOfficialApril2013-150x150" translatesAutoresizingMaskIntoConstraints="NO" id="fCn-px-DuR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="317" width="48" height="48"/>
+                                </variation>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsp-5S-bQe">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,18 +218,12 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="184" y="326" width="73" height="30"/>
+                                    <rect key="frame" x="151" y="326" width="73" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="Ar4-pl-2Lx" kind="show" id="Ypa-nY-iOi"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FacebookLogoOfficialApril2013-150x150" translatesAutoresizingMaskIntoConstraints="NO" id="fCn-px-DuR">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="128" y="317" width="48" height="48"/>
-                                </variation>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -234,8 +234,8 @@
                                 <exclude reference="Lu0-fs-oNQ"/>
                                 <exclude reference="tfm-IB-UVd"/>
                                 <exclude reference="Pf7-JZ-Mvl"/>
-                                <exclude reference="Qsp-5S-bQe"/>
                                 <exclude reference="fCn-px-DuR"/>
+                                <exclude reference="Qsp-5S-bQe"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -246,12 +246,12 @@
                                 <include reference="Lu0-fs-oNQ"/>
                                 <include reference="tfm-IB-UVd"/>
                                 <include reference="Pf7-JZ-Mvl"/>
-                                <include reference="Qsp-5S-bQe"/>
                                 <include reference="fCn-px-DuR"/>
+                                <include reference="Qsp-5S-bQe"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5h-vM-oXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
