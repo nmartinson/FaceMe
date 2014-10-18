@@ -35,8 +35,16 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
+        self.performSegueWithIdentifier("profile", sender: self)
     }
 	
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "profile"
+        {
+            let profileViewController = segue.destinationViewController as ViewController
+            
+        }
+    }
+    
 
 }

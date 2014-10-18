@@ -16,24 +16,24 @@ class ViewController: UIViewController,NSURLConnectionDataDelegate,NSURLConnecti
 	var selectedIndex = -1
 	var activityIndicator:UIActivityIndicatorView? = nil
 	var detailItem = 1
-	let url = "faseme.mybluemix.net?username=nickypoo&lat=6&lon=9"
+	let url = "http://www.espn.com"
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		self.showActivityIndicator()
-		if detailItem==0
-		{
-			self.callSynchronous(url)
-		}
-		else if detailItem == 1
-		{
-			self.callAsynchronous(url)
-		}
-		else
-		{
-			self.callAsyncWithCompletionHandler(url)
-		}
+//		if detailItem==0
+//		{
+//			self.callSynchronous(url)
+//		}
+//		else if detailItem == 1
+//		{
+//			self.callAsynchronous(url)
+//		}
+//		else
+//		{
+//			self.callAsyncWithCompletionHandler(url)
+//		}
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -125,6 +125,7 @@ class ViewController: UIViewController,NSURLConnectionDataDelegate,NSURLConnecti
 	{
 		NSLog("didReceiveData")
 		self.data.appendData(_data)
+        println(data)
 	}
 	
 	func connectionDidFinishLoading(connection: NSURLConnection!)
