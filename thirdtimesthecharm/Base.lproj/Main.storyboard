@@ -36,7 +36,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="0uG-Wu-KWC"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2014-10-18 at 3.32.34 AM" translatesAutoresizingMaskIntoConstraints="NO" id="Ko6-bu-FLo">
+                            <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="Ko6-bu-FLo">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="-8" width="320" height="550"/>
@@ -201,7 +201,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2014-10-18 at 3.32.34 AM" translatesAutoresizingMaskIntoConstraints="NO" id="b1D-hf-nWV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="b1D-hf-nWV">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-2" y="0.0" width="325" height="568"/>
@@ -284,6 +284,35 @@
                                     <action selector="sendCoordinates:" destination="VPC-PV-puV" eventType="touchUpInside" id="Xxe-06-xAo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFr-H7-FJP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="120" y="450" width="81" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpV-AE-n02">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="17" y="138" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="testButtonPressed:" destination="VPC-PV-puV" eventType="touchUpInside" id="nMW-68-ZVM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -296,6 +325,8 @@
                                 <exclude reference="3ap-uf-RFb"/>
                                 <exclude reference="efL-Oh-QuM"/>
                                 <exclude reference="A4F-wn-gmV"/>
+                                <exclude reference="OFr-H7-FJP"/>
+                                <exclude reference="HpV-AE-n02"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -308,11 +339,15 @@
                                 <include reference="3ap-uf-RFb"/>
                                 <include reference="efL-Oh-QuM"/>
                                 <include reference="A4F-wn-gmV"/>
+                                <include reference="OFr-H7-FJP"/>
+                                <include reference="HpV-AE-n02"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="continuePressed" destination="OFr-H7-FJP" id="9b5-XY-KiL"/>
+                        <outlet property="fakeButton" destination="HpV-AE-n02" id="nJ5-7q-73r"/>
                         <outlet property="getCoordinates" destination="A4F-wn-gmV" id="QcP-oh-v7R"/>
                         <outlet property="randomButton" destination="efL-Oh-QuM" id="Vg3-Lb-4UM"/>
                         <outlet property="statusLabel" destination="eDA-Np-XWh" id="XHV-hc-8Wt"/>
@@ -334,7 +369,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2014-10-18 at 3.32.34 AM" translatesAutoresizingMaskIntoConstraints="NO" id="igc-mL-Sof">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="igc-mL-Sof">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-17" y="0.0" width="375" height="762"/>
@@ -842,7 +877,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2014-10-18 at 3.32.34 AM" translatesAutoresizingMaskIntoConstraints="NO" id="SJR-m6-9m0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="SJR-m6-9m0">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1048,12 +1083,11 @@
     </scenes>
     <resources>
         <image name="FacebookLogoOfficialApril2013-150x150" width="136" height="139"/>
-        <image name="Screen Shot 2014-10-18 at 3.32.34 AM" width="768" height="1018"/>
         <image name="background_image" width="768" height="1018"/>
         <image name="glyphicons_136_cogwheel" width="24" height="24"/>
         <image name="glyphicons_367_expand" width="19" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ypa-nY-iOi"/>
+        <segue reference="teB-Yg-ffP"/>
     </inferredMetricsTieBreakers>
 </document>

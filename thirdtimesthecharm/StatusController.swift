@@ -15,6 +15,8 @@ class StatusController: UIViewController {
     @IBOutlet weak var randomButton: UIButton!
     @IBOutlet weak var getCoordinates: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var continuePressed: UIButton!
+    @IBOutlet weak var fakeButton: UIButton!
     
     
     var data = NSMutableData()  // Declare Globally
@@ -23,23 +25,39 @@ class StatusController: UIViewController {
     var detailItem = 1
     let url = "http://hackwar.mybluemix.net/PingLocation?username="
     var geoManager = GeoManager.sharedInstance
+    var pending = true
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         geoManager.startStandardUpdates()
+        if pending == true{
+            continuePressed.enabled = false;
+            continuePressed.hidden = true;
+        }
+        else{
+            continuePressed.enabled = true;
+            continuePressed.hidden = false;
+        }
 
     }
-
     
-    //play with this for cool messages
+    
+    @IBAction func testButtonPressed(sender: AnyObject){
+        pending = false
+        continuePressed.enabled = true;
+        continuePressed.hidden = false;
+    }
+    
+    
+    
     @IBAction func randomPressed(sender: AnyObject) {
 		var my_message = randomString()
         var alert = UIAlertController(title: "Random Conversation Starter", message: my_message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Let's Do This", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    
+
     @IBAction func sendCoordinates(sender: AnyObject)
     {
         var loc = geoManager.location!

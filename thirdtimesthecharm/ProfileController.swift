@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ProfileController: UIViewController {
-    @IBOutlet weak var editLabel: UIBarButtonItem!
+    /*@IBOutlet weak var editLabel: UIBarButtonItem!
     @IBOutlet weak var statusText: UITextField!
     @IBOutlet weak var hahaLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -51,7 +51,7 @@ class ProfileController: UIViewController {
     var dataFromInterest:String = ""
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        //super.viewDidLoad()
         nameLabel.text = NSUserDefaults.standardUserDefaults().valueForKey("user_name") as? String
         scrollView.contentSize = CGSize(width: 300, height: 550)        
         scrollView.hidden = true
@@ -89,7 +89,7 @@ class ProfileController: UIViewController {
 //            }
         }
         editToggle = !editToggle
-    }
+    }*/
     
     
     
