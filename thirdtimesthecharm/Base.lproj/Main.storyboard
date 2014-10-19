@@ -350,35 +350,6 @@
                                     <rect key="frame" x="16" y="83" width="166" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUZ-MO-SNb">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Send Data, Bitch!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="99" y="538" width="121" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHw-uK-8q8">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Let's hang out">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="99" y="510" width="133" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="VPC-PV-puV" kind="show" id="EJ5-xC-2Xr"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000016" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bio goes here..." minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cyM-l4-xoX">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -635,28 +606,46 @@
                                     <outlet property="delegate" destination="rag-IE-D9f" id="NpN-dg-UNv"/>
                                 </connections>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHw-uK-8q8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Let's hang out">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="97" y="518" width="133" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="VPC-PV-puV" kind="show" id="EJ5-xC-2Xr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="igc-mL-Sof"/>
                                 <exclude reference="5dw-wJ-F1u"/>
-                                <exclude reference="qUZ-MO-SNb"/>
-                                <exclude reference="CHw-uK-8q8"/>
                                 <exclude reference="cyM-l4-xoX"/>
                                 <exclude reference="c1B-Ne-cCN"/>
                                 <exclude reference="HE9-0i-emm"/>
+                                <exclude reference="CHw-uK-8q8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="igc-mL-Sof"/>
                                 <include reference="5dw-wJ-F1u"/>
-                                <include reference="qUZ-MO-SNb"/>
-                                <include reference="CHw-uK-8q8"/>
                                 <include reference="cyM-l4-xoX"/>
                                 <include reference="c1B-Ne-cCN"/>
                                 <include reference="HE9-0i-emm"/>
+                                <include reference="CHw-uK-8q8"/>
                             </mask>
                         </variation>
                     </view>
@@ -685,6 +674,7 @@
                         <outlet property="hawkeyeButton" destination="aUA-tk-fV6" id="5we-eI-UZz"/>
                         <outlet property="musicButton" destination="PjI-B1-lVq" id="vGL-4F-OM1"/>
                         <outlet property="musicLabel" destination="oDQ-eZ-2Th" id="Ubf-T3-cZB"/>
+                        <outlet property="nameLabel" destination="5dw-wJ-F1u" id="Z13-Bx-JT6"/>
                         <outlet property="napLabel" destination="kEO-pP-S7U" id="Ymy-mZ-TEm"/>
                         <outlet property="nappButton" destination="f7U-5P-ciD" id="ZT9-5M-Zg6"/>
                         <outlet property="punLabel" destination="sMg-Vd-kMa" id="2aX-kf-Qf7"/>

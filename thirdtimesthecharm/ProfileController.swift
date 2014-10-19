@@ -36,18 +36,23 @@ class ProfileController: UIViewController {
     @IBOutlet weak var danceButton: UISwitch!
     @IBOutlet weak var foodButton: UISwitch!
     @IBOutlet weak var waterButton: UISwitch!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     var interestController:InterestTableController! = nil
     var editToggle = true
     var bioMessage = "Enter a cute little tidbit about yourself!"
     var interests = [ "Hawkeyes", "Coding", "Mountain Biking","Music","Napping In Public","Golf","Rock Climbing", "Puns", "Dancing",   "Food", "Water" ]
     var interestValues = [false,false,false,false,false,false,false,false,false,false, false]
-//    var array = [hawkeyeButton,codeButton, bikingButton, musicButton,waterButton,foodButton,danceButton,rockButton,punsButton,]
+    var buttonArray: [UISwitch]
+    
+//    buttonArray = [ hawkeyeButton, codingButton, bikingButton, musicButton,nappButton, golfButton, rockButton, punsButton, danceButton, foodButton, waterButton]
     
     var dataFromInterest:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = NSUserDefaults.standardUserDefaults().valueForKey("user_name") as? String
         scrollView.contentSize = CGSize(width: 300, height: 550)        
         scrollView.hidden = true
         statusText.enabled=false
@@ -78,9 +83,9 @@ class ProfileController: UIViewController {
             bioMessage = statusText.text
             hahaLabel.text = bioMessage
             scrollView.hidden = true
-//            for ( Int i = 0; i< interests.length; i++)
+//            for item in buttonArray
 //            {
-//                if(
+//                item
 //            }
         }
         editToggle = !editToggle
