@@ -11,6 +11,11 @@
 		2E5BEDA819F2963A00CC60B7 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA719F2963A00CC60B7 /* ProfileController.swift */; };
 		2E5BEDAA19F2AAC700CC60B7 /* glyphicons_0_eye_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA919F2AAC700CC60B7 /* glyphicons_0_eye_open.png */; };
 		2E5BEDAC19F2B23000CC60B7 /* glyphicons_0_eye_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BEDAB19F2B23000CC60B7 /* glyphicons_0_eye_close.png */; };
+		2E5BEDAE19F2E36800CC60B7 /* topicGeneratorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDAD19F2E36800CC60B7 /* topicGeneratorController.swift */; };
+		2E5BEDB019F2EC4C00CC60B7 /* StatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDAF19F2EC4C00CC60B7 /* StatusController.swift */; };
+		2E5BEDBA19F30C1600CC60B7 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; };
+		2E5BEDBC19F3262400CC60B7 /* InterestTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDBB19F3262400CC60B7 /* InterestTableController.swift */; };
+		2E5BEDBE19F33BFE00CC60B7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDBD19F33BFE00CC60B7 /* LoginController.swift */; };
 		2ED16F8B19F247ED007223AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED16F8A19F247ED007223AA /* AppDelegate.swift */; };
 		2ED16F8E19F247ED007223AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED16F8D19F247ED007223AA /* ViewController.swift */; };
 		2ED16F9119F247ED007223AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED16F8F19F247ED007223AA /* Main.storyboard */; };
@@ -20,6 +25,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2E5BEDB619F30BF100CC60B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E5BEDB119F30BF000CC60B7 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
+		2E5BEDB819F30BF100CC60B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E5BEDB119F30BF000CC60B7 /* SwiftHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
+			remoteInfo = SwiftHTTPTests;
+		};
 		2ED16F9C19F247ED007223AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2ED16F7A19F247ED007223AA /* Project object */;
@@ -34,6 +53,11 @@
 		2E5BEDA719F2963A00CC60B7 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		2E5BEDA919F2AAC700CC60B7 /* glyphicons_0_eye_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glyphicons_0_eye_open.png; path = thirdtimesthecharm/Images.xcassets/glyphicons_051_eye_open.imageset/glyphicons_0_eye_open.png; sourceTree = "<group>"; };
 		2E5BEDAB19F2B23000CC60B7 /* glyphicons_0_eye_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glyphicons_0_eye_close.png; path = thirdtimesthecharm/Images.xcassets/glyphicons_052_eye_close.imageset/glyphicons_0_eye_close.png; sourceTree = "<group>"; };
+		2E5BEDAD19F2E36800CC60B7 /* topicGeneratorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topicGeneratorController.swift; sourceTree = "<group>"; };
+		2E5BEDAF19F2EC4C00CC60B7 /* StatusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusController.swift; sourceTree = "<group>"; };
+		2E5BEDB119F30BF000CC60B7 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = "../../Downloads/SwiftHTTP-master/SwiftHTTP.xcodeproj"; sourceTree = "<group>"; };
+		2E5BEDBB19F3262400CC60B7 /* InterestTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestTableController.swift; sourceTree = "<group>"; };
+		2E5BEDBD19F33BFE00CC60B7 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		2ED16F8219F247ED007223AA /* thirdtimesthecharm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thirdtimesthecharm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED16F8619F247ED007223AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ED16F8A19F247ED007223AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E5BEDBA19F30C1600CC60B7 /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E5BEDB219F30BF000CC60B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */,
+				2E5BEDB919F30BF100CC60B7 /* SwiftHTTPTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2ED16F7919F247ED007223AA = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +106,7 @@
 				2ED16F8319F247ED007223AA /* Products */,
 				2E5BEDA919F2AAC700CC60B7 /* glyphicons_0_eye_open.png */,
 				2E5BEDAB19F2B23000CC60B7 /* glyphicons_0_eye_close.png */,
+				2E5BEDB119F30BF000CC60B7 /* SwiftHTTP.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,9 +124,13 @@
 			children = (
 				2ED16F8A19F247ED007223AA /* AppDelegate.swift */,
 				2ED16F8D19F247ED007223AA /* ViewController.swift */,
+				2E5BEDBD19F33BFE00CC60B7 /* LoginController.swift */,
 				2E5BEDA519F28FE500CC60B7 /* TableViewController.swift */,
 				2E5BEDA719F2963A00CC60B7 /* ProfileController.swift */,
+				2E5BEDBB19F3262400CC60B7 /* InterestTableController.swift */,
+				2E5BEDAD19F2E36800CC60B7 /* topicGeneratorController.swift */,
 				2ED16F8F19F247ED007223AA /* Main.storyboard */,
+				2E5BEDAF19F2EC4C00CC60B7 /* StatusController.swift */,
 				2ED16F9219F247ED007223AA /* Images.xcassets */,
 				2ED16F9419F247ED007223AA /* LaunchScreen.xib */,
 				2ED16F8519F247ED007223AA /* Supporting Files */,
@@ -191,6 +230,12 @@
 			mainGroup = 2ED16F7919F247ED007223AA;
 			productRefGroup = 2ED16F8319F247ED007223AA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2E5BEDB219F30BF000CC60B7 /* Products */;
+					ProjectRef = 2E5BEDB119F30BF000CC60B7 /* SwiftHTTP.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2ED16F8119F247ED007223AA /* thirdtimesthecharm */,
@@ -198,6 +243,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftHTTP.framework;
+			remoteRef = 2E5BEDB619F30BF100CC60B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2E5BEDB919F30BF100CC60B7 /* SwiftHTTPTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftHTTPTests.xctest;
+			remoteRef = 2E5BEDB819F30BF100CC60B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2ED16F8019F247ED007223AA /* Resources */ = {
@@ -227,8 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ED16F8E19F247ED007223AA /* ViewController.swift in Sources */,
+				2E5BEDB019F2EC4C00CC60B7 /* StatusController.swift in Sources */,
+				2E5BEDBC19F3262400CC60B7 /* InterestTableController.swift in Sources */,
 				2E5BEDA619F28FE500CC60B7 /* TableViewController.swift in Sources */,
 				2ED16F8B19F247ED007223AA /* AppDelegate.swift in Sources */,
+				2E5BEDBE19F33BFE00CC60B7 /* LoginController.swift in Sources */,
+				2E5BEDAE19F2E36800CC60B7 /* topicGeneratorController.swift in Sources */,
 				2E5BEDA819F2963A00CC60B7 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

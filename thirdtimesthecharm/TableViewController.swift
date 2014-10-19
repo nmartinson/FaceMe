@@ -16,15 +16,18 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var visibilityButton: UIImageView!
     @IBOutlet weak var randomSwitch: UISwitch!
     @IBOutlet weak var randomLable: UIBarButtonItem!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let notVisibileIMG = UIImage(named: "glyphicons_0_eye_close.png") as UIImage
     let visibileIMG = UIImage(named: "glyphicons_0_eye_open.png") as UIImage
     var items: [String] = ["We", "Heart", "Swift"]
     var visibilityToggle = true
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         visibilityButton.image = notVisibileIMG
+        activityIndicator.hidden = true
         randomSwitch.on = false
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
@@ -84,12 +87,32 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     {
         if randomSwitch.on
         {
-            randomLable.title = "Searching.."
+            self.showActivityIndicator()
+            randomLable.title = "Looking     "
+//            randomLable.title = "Searching.."
         }
         else
         {
+            self.removeActivityIndicator()
             randomLable.title = "Random    "
         }
-
+    }
+    
+    func showActivityIndicator()
+    {
+        activityIndicator.hidden = false
+//        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle:UIActivityIndicatorViewStyle.Gray)
+//        activityIndicator!.center = self.view.center
+//        self.view.addSubview(activityIndicator!)
+        activityIndicator!.startAnimating()
+    }
+    
+    func removeActivityIndicator()
+    {
+        if (activityIndicator != nil)
+        {
+            activityIndicator!.stopAnimating()
+            activityIndicator.hidden = true
+        }
     }
 }
