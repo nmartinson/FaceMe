@@ -7,33 +7,25 @@
 //
 
 import UIKit
+import SwiftHTTP
 
-class ViewController: UIViewController,NSURLConnectionDataDelegate,NSURLConnectionDelegate {
+class ViewController: UIViewController {
 	
 	@IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var label: UILabel!
 
 	var data = NSMutableData()  // Declare Globally
 	var selectedIndex = -1
 	var activityIndicator:UIActivityIndicatorView? = nil
 	var detailItem = 1
-	let url = "faseme.mybluemix.net?username=nickypoo&lat=6&lon=9"
-	
+    let urlString = "http://hackwar.mybluemix.net/PingLocation?username=data&lon=5&lat=6"
+    
+    lazy var geoManager = GeoManager.sharedInstance
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
-		self.showActivityIndicator()
-		if detailItem==0
-		{
-			self.callSynchronous(url)
-		}
-		else if detailItem == 1
-		{
-			self.callAsynchronous(url)
-		}
-		else
-		{
-			self.callAsyncWithCompletionHandler(url)
-		}
+        self.geoManager.start()
+
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -41,106 +33,29 @@ class ViewController: UIViewController,NSURLConnectionDataDelegate,NSURLConnecti
 		// Dispose of any resources that can be recreated.
 	}
 	
-	@IBAction func sendData(sender: AnyObject)
-	{
-		self.callAsynchronous(url)
-	}
+    @IBAction func sendDatas(sender: AnyObject)
+    {
+        
+        var loc = geoManager.location
+        var locStr:String = "\(loc?.coordinate.latitude)"
+        label.text = locStr
+        println(locStr)
+        
+//        var urlString = "\(url)\(user)&password=\(pw)"
+//        println(urlString)
+        
+//        var request = HTTPTask()
+//        request.GET(urlString, parameters: nil, success: {(response: HTTPResponse) in
+//            if response.responseObject != nil {
+//                let data = response.responseObject as NSData
+//                let str = NSString(data: data, encoding: NSUTF8StringEncoding)
+//                println("response: \(str)") //prints the HTML of the page
+//            }
+//            },failure: {(error: NSError) in
+//                println("error: \(error)")
+//        })
+    }
 	
-	func callSynchronous(urlString:String)
-	{
-		var urlString = "Your_URL_Here"
-		var url = NSURL.URLWithString(urlString)// Creating URL
-		var request = NSURLRequest(URL: url) // Creating Http Request
-		
-		var response:AutoreleasingUnsafeMutablePointer<NSURLResponse?> = nil
-		var error: AutoreleasingUnsafeMutablePointer<NSErrorPointer?> = nil
-		//
-		//		// Sending Synchronous request using NSURLConnection
-		var responseData = NSURLConnection.sendSynchronousRequest(request,returningResponse: response, error:nil) as NSData?
-		//
-		//		if error != nil
-		//		{
-		//			self.removeActivityIndicator()
-		//		}
-		//		else
-		//		{
-		//Converting data to String
-		var responseStr:NSString = NSString(data:responseData!, encoding:NSUTF8StringEncoding)
-		var responseDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(responseData!,options: NSJSONReadingOptions.MutableContainers, error:nil) as NSDictionary
-		//			self.createWebViewLoadHTMLString(responseStr);
-		//		}
-	}
-	
-	/**
-	 * Asynchronous Call with completion handler
-	 */
-	
-	func callAsyncWithCompletionHandler(urlString:String)
-	{
-		println("callAsyncWithCompletionHandler")
-		
-		var url = NSURL.URLWithString(urlString)// Creating URL
-		var request = NSURLRequest(URL: url)// Creating Http Request
-		
-		// Creating NSOperationQueue to which the handler block is dispatched when the request completes or failed
-		var queue: NSOperationQueue = NSOperationQueue()
-		
-		// Sending Asynchronous request using NSURLConnection
-		NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{(response:NSURLResponse!, responseData:NSData!, error: NSError!) ->Void in
-			
-			if error != nil
-			{
-				println(error.description)
-				self.removeActivityIndicator()
-			}
-			else
-			{
-				var responseStr:NSString = NSString(data:responseData, encoding:NSUTF8StringEncoding)
-				//var responseDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(responseData,options: NSJSONReadingOptions.MutableContainers, error:nil) as NSDictionary
-				//				self.createWebViewLoadHTMLString(responseStr);
-			}
-		})
-	}
-	
-	/**
-	 * Asynchronous Call
-	 */
-	func callAsynchronous(urlString:String)
-	{
-		
-		NSLog("connectWithUrl")
-		var url = NSURL.URLWithString(urlString)// Creating URL
-		var request = NSURLRequest(URL: url)// Creating Http Request
-		//Making request
-		var connection = NSURLConnection(request: request, delegate: self, startImmediately: true)
-	}
-	
-	func connection(connection: NSURLConnection!, didReceiveResponse response: NSURLResponse!)
-	{
-		//Will be called when
-		NSLog("didReceiveResponse")
-	}
-	
-	func connection(connection: NSURLConnection!, didReceiveData _data: NSData!)
-	{
-		NSLog("didReceiveData")
-		self.data.appendData(_data)
-	}
-	
-	func connectionDidFinishLoading(connection: NSURLConnection!)
-	{
-		NSLog("connectionDidFinishLoading")
-		
-		var responseStr:NSString = NSString(data:self.data, encoding:NSUTF8StringEncoding)
-		//var responseDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(responseData,options: NSJSONReadingOptions.MutableContainers, error:nil) as NSDictionary
-		//		self.createWebViewLoadHTMLString(responseStr);
-	}
-	
-	func connection(connection: NSURLConnection!, didFailWithError error: NSError!)
-	{
-		NSLog("didFailWithError=%@",error)
-		self.removeActivityIndicator()
-	}
 	
 	
 	/**
@@ -151,11 +66,8 @@ class ViewController: UIViewController,NSURLConnectionDataDelegate,NSURLConnecti
 	{
 		activityIndicator = UIActivityIndicatorView(activityIndicatorStyle:UIActivityIndicatorViewStyle.Gray)
 		activityIndicator!.center = self.view.center
-		//activityIndicator!.hidesWhenStopped = true
 		self.view.addSubview(activityIndicator!)
-		
 		activityIndicator!.startAnimating()
-		
 	}
 	
 	func removeActivityIndicator()
@@ -166,5 +78,5 @@ class ViewController: UIViewController,NSURLConnectionDataDelegate,NSURLConnecti
 		}
 	}
 	
-	}
+}
 	
