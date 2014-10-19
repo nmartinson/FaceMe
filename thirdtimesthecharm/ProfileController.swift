@@ -46,7 +46,7 @@ class ProfileController: UIViewController {
     var interestValues = [false,false,false,false,false,false,false,false,false,false, false]
     var buttonArray: [UISwitch]
     
-    buttonArray = [ hawkeyeButton, codingButton, bikingButton, musicButton,nappButton, golfButton, rockButton, punsButton, danceButton, foodButton, waterButton]
+//    buttonArray = [ hawkeyeButton, codingButton, bikingButton, musicButton,nappButton, golfButton, rockButton, punsButton, danceButton, foodButton, waterButton]
     
     var dataFromInterest:String = ""
 
@@ -83,10 +83,10 @@ class ProfileController: UIViewController {
             bioMessage = statusText.text
             hahaLabel.text = bioMessage
             scrollView.hidden = true
-            for item in buttonArray
-            {
-                item
-            }
+//            for item in buttonArray
+//            {
+//                item
+//            }
         }
         editToggle = !editToggle
     }
