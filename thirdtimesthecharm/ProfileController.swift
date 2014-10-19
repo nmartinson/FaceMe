@@ -78,10 +78,7 @@ class ProfileController: UIViewController {
             bioMessage = statusText.text
             hahaLabel.text = bioMessage
             scrollView.hidden = true
-            for ( Int i = 0; i< interests.length; i++)
-            {
-                if(
-            }
+
         }
         editToggle = !editToggle
     }
