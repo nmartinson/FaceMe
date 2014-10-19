@@ -32,6 +32,8 @@ class LoginController: UIViewController
         var user = userName.text
         var pw = password.text
         
+        var defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setValue(user, forKey: "user_name")
         // check for nil strings
         
         if( user != "" && pw != "")
