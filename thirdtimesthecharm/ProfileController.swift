@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ProfileController: UIViewController {
-    /*@IBOutlet weak var editLabel: UIBarButtonItem!
+    @IBOutlet weak var editLabel: UIBarButtonItem!
     @IBOutlet weak var statusText: UITextField!
     @IBOutlet weak var hahaLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -89,7 +89,7 @@ class ProfileController: UIViewController {
 //            }
         }
         editToggle = !editToggle
-    }*/
+    }
     
     
     
