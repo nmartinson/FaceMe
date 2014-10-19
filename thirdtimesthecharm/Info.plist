@@ -26,14 +26,15 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>NSLocationUsageDescription</key>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Testing</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>testing 2</string>
+    <key>NSLocationUsageDescription</key>
 	<string>Your message</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
-		<string>NSLocationAlwaysUsageDescription</string>
-		<string>NSLocationWhenInUsageDescription</string>
-		<string>gps</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

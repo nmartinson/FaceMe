@@ -38,10 +38,13 @@ public class GeoManager : NSObject, CLLocationManagerDelegate {
     
     func startStandardUpdates()
     {
+        
         if(locationManager.isEqual(nil))
         {
             locationManager = CLLocationManager()
         }
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.distanceFilter = 500
