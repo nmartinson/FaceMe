@@ -56,6 +56,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
         }
     }
+    
     @IBAction func visibilityButtonPressed(sender: AnyObject) {
         if (visibilityToggle == true)
         {

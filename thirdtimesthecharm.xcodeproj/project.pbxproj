@@ -16,6 +16,7 @@
 		2E5BEDBA19F30C1600CC60B7 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; };
 		2E5BEDBC19F3262400CC60B7 /* InterestTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDBB19F3262400CC60B7 /* InterestTableController.swift */; };
 		2E5BEDBE19F33BFE00CC60B7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDBD19F33BFE00CC60B7 /* LoginController.swift */; };
+		2E5BEDC019F34A6500CC60B7 /* GeoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDBF19F34A6500CC60B7 /* GeoManager.swift */; };
 		2ED16F8B19F247ED007223AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED16F8A19F247ED007223AA /* AppDelegate.swift */; };
 		2ED16F8E19F247ED007223AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED16F8D19F247ED007223AA /* ViewController.swift */; };
 		2ED16F9119F247ED007223AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ED16F8F19F247ED007223AA /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		2E5BEDB119F30BF000CC60B7 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = "../../Downloads/SwiftHTTP-master/SwiftHTTP.xcodeproj"; sourceTree = "<group>"; };
 		2E5BEDBB19F3262400CC60B7 /* InterestTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestTableController.swift; sourceTree = "<group>"; };
 		2E5BEDBD19F33BFE00CC60B7 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		2E5BEDBF19F34A6500CC60B7 /* GeoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoManager.swift; sourceTree = "<group>"; };
 		2ED16F8219F247ED007223AA /* thirdtimesthecharm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thirdtimesthecharm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED16F8619F247ED007223AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ED16F8A19F247ED007223AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				2ED16F8A19F247ED007223AA /* AppDelegate.swift */,
 				2ED16F8D19F247ED007223AA /* ViewController.swift */,
+				2E5BEDBF19F34A6500CC60B7 /* GeoManager.swift */,
 				2E5BEDBD19F33BFE00CC60B7 /* LoginController.swift */,
 				2E5BEDA519F28FE500CC60B7 /* TableViewController.swift */,
 				2E5BEDA719F2963A00CC60B7 /* ProfileController.swift */,
@@ -295,6 +298,7 @@
 				2ED16F8B19F247ED007223AA /* AppDelegate.swift in Sources */,
 				2E5BEDBE19F33BFE00CC60B7 /* LoginController.swift in Sources */,
 				2E5BEDAE19F2E36800CC60B7 /* topicGeneratorController.swift in Sources */,
+				2E5BEDC019F34A6500CC60B7 /* GeoManager.swift in Sources */,
 				2E5BEDA819F2963A00CC60B7 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

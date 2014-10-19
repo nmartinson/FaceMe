@@ -13,7 +13,29 @@ class ProfileController: UIViewController {
     @IBOutlet weak var editLabel: UIBarButtonItem!
     @IBOutlet weak var statusText: UITextField!
     @IBOutlet weak var hahaLabel: UILabel!
-    @IBOutlet weak var tableViewContainer: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var waterLabel: UILabel!
+    @IBOutlet weak var foodLabel: UILabel!
+    @IBOutlet weak var dancingLabel: UILabel!
+    @IBOutlet weak var punLabel: UILabel!
+    @IBOutlet weak var rockLabel: UILabel!
+    @IBOutlet weak var golfLabel: UILabel!
+    @IBOutlet weak var napLabel: UILabel!
+    @IBOutlet weak var musicLabel: UILabel!
+    @IBOutlet weak var bikeLabel: UILabel!
+    @IBOutlet weak var codeLabel: UILabel!
+    @IBOutlet weak var hawkLabel: UILabel!
+    @IBOutlet weak var hawkeyeButton: UISwitch!
+    @IBOutlet weak var codingButton: UISwitch!
+    @IBOutlet weak var bikingButton: UISwitch!
+    @IBOutlet weak var musicButton: UISwitch!
+    @IBOutlet weak var nappButton: UISwitch!
+    @IBOutlet weak var golfButton: UISwitch!
+    @IBOutlet weak var punsButton: UISwitch!
+    @IBOutlet weak var rockButton: UISwitch!
+    @IBOutlet weak var danceButton: UISwitch!
+    @IBOutlet weak var foodButton: UISwitch!
+    @IBOutlet weak var waterButton: UISwitch!
     
     var interestController:InterestTableController! = nil
     var editToggle = true
@@ -26,7 +48,8 @@ class ProfileController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewContainer.hidden = true
+        scrollView.contentSize = CGSize(width: 300, height: 550)        
+        scrollView.hidden = true
         statusText.enabled=false
         statusText.hidden = true
         hahaLabel.hidden = false
@@ -41,24 +64,8 @@ class ProfileController: UIViewController {
             statusText.hidden = false
             statusText.enabled = true
             hahaLabel.hidden = true
-            tableViewContainer.hidden = false
-            
-            if let viewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Interests") as InterestTableController?{
-                viewController.availableData = {[weak self]
-                    (data) in
-                    if let weakSelf = self{
-                        println(data)
-                        println("YES")
-//                        weakSelf.wordEntered(data)
-                    }
-                }
-            }
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = storyboard.instantiateViewControllerWithIdentifier("Interests") as InterestTableController
-            
-            
-//            dataFromInterest = vc.hawkeyeLabel.text!
-//            println(dataFromInterest)
+            scrollView.hidden = false
+
         
         }
         else if( editToggle == false)
@@ -69,7 +76,7 @@ class ProfileController: UIViewController {
             hahaLabel.hidden = false
             bioMessage = statusText.text
             hahaLabel.text = bioMessage
-            tableViewContainer.hidden = true
+            scrollView.hidden = true
         }
         editToggle = !editToggle
     }
