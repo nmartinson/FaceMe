@@ -38,18 +38,13 @@ class ProfileController: UIViewController {
     @IBOutlet weak var waterButton: UISwitch!
     @IBOutlet weak var nameLabel: UILabel!
     
-    
-    var interestController:InterestTableController! = nil
-    var editToggle = true
+	var editToggle = true
     var bioMessage = "Enter a cute little tidbit about yourself!"
     var interests = [ "Hawkeyes", "Coding", "Mountain Biking","Music","Napping In Public","Golf","Rock Climbing", "Puns", "Dancing",   "Food", "Water" ]
     var interestValues = [false,false,false,false,false,false,false,false,false,false, false]
-    var buttonArray: [UISwitch]
-    
-//    buttonArray = [ hawkeyeButton, codingButton, bikingButton, musicButton,nappButton, golfButton, rockButton, punsButton, danceButton, foodButton, waterButton]
-    
-    var dataFromInterest:String = ""
+	var buttonArray:[UISwitch] = []
 
+	
     override func viewDidLoad() {
         //super.viewDidLoad()
         nameLabel.text = NSUserDefaults.standardUserDefaults().valueForKey("user_name") as? String
@@ -59,6 +54,7 @@ class ProfileController: UIViewController {
         statusText.hidden = true
         hahaLabel.hidden = false
         hahaLabel.text = bioMessage
+		buttonArray = [ hawkeyeButton, codingButton, bikingButton, musicButton, nappButton, golfButton, rockButton, punsButton, danceButton, foodButton, waterButton]
     }
 
     @IBAction func editPressed(sender: AnyObject)
@@ -70,9 +66,6 @@ class ProfileController: UIViewController {
             statusText.enabled = true
             hahaLabel.hidden = true
             scrollView.hidden = false
-            
-
-        
         }
         else if( editToggle == false)
         {
@@ -83,10 +76,11 @@ class ProfileController: UIViewController {
             bioMessage = statusText.text
             hahaLabel.text = bioMessage
             scrollView.hidden = true
-//            for item in buttonArray
-//            {
-//                item
-//            }
+            for item in buttonArray
+            {
+//                if( item.on )
+//				{
+            }
         }
         editToggle = !editToggle
     }

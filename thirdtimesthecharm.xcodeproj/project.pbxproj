@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E09AE0A19F38C6E00E49F09 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; };
-		2E09AE0B19F38C6E00E49F09 /* SwiftHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B98131F19F39412007EF6E1 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; };
+		2B98132019F39412007EF6E1 /* SwiftHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2E5BEDA619F28FE500CC60B7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA519F28FE500CC60B7 /* TableViewController.swift */; };
 		2E5BEDA819F2963A00CC60B7 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA719F2963A00CC60B7 /* ProfileController.swift */; };
 		2E5BEDAA19F2AAC700CC60B7 /* glyphicons_0_eye_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA919F2AAC700CC60B7 /* glyphicons_0_eye_open.png */; };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2E09AE0C19F38C6E00E49F09 /* PBXContainerItemProxy */ = {
+		2B98132119F39412007EF6E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2E5BEDB119F30BF000CC60B7 /* SwiftHTTP.xcodeproj */;
 			proxyType = 1;
@@ -58,13 +58,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2E09AE0E19F38C6E00E49F09 /* Embed Frameworks */ = {
+		2B98132319F39412007EF6E1 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2E09AE0B19F38C6E00E49F09 /* SwiftHTTP.framework in Embed Frameworks */,
+				2B98132019F39412007EF6E1 /* SwiftHTTP.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E09AE0A19F38C6E00E49F09 /* SwiftHTTP.framework in Frameworks */,
+				2B98131F19F39412007EF6E1 /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,12 +198,12 @@
 				2ED16F7E19F247ED007223AA /* Sources */,
 				2ED16F7F19F247ED007223AA /* Frameworks */,
 				2ED16F8019F247ED007223AA /* Resources */,
-				2E09AE0E19F38C6E00E49F09 /* Embed Frameworks */,
+				2B98132319F39412007EF6E1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2E09AE0D19F38C6E00E49F09 /* PBXTargetDependency */,
+				2B98132219F39412007EF6E1 /* PBXTargetDependency */,
 			);
 			name = thirdtimesthecharm;
 			productName = thirdtimesthecharm;
@@ -339,10 +339,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2E09AE0D19F38C6E00E49F09 /* PBXTargetDependency */ = {
+		2B98132219F39412007EF6E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftHTTP;
-			targetProxy = 2E09AE0C19F38C6E00E49F09 /* PBXContainerItemProxy */;
+			targetProxy = 2B98132119F39412007EF6E1 /* PBXContainerItemProxy */;
 		};
 		2ED16F9D19F247ED007223AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
