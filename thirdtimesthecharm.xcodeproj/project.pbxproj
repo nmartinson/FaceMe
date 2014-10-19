@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E56158819F36B0B000D6166 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; };
+		2E56158919F36B0B000D6166 /* SwiftHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2E5BEDA619F28FE500CC60B7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA519F28FE500CC60B7 /* TableViewController.swift */; };
 		2E5BEDA819F2963A00CC60B7 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA719F2963A00CC60B7 /* ProfileController.swift */; };
 		2E5BEDAA19F2AAC700CC60B7 /* glyphicons_0_eye_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA919F2AAC700CC60B7 /* glyphicons_0_eye_open.png */; };
 		2E5BEDAC19F2B23000CC60B7 /* glyphicons_0_eye_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BEDAB19F2B23000CC60B7 /* glyphicons_0_eye_close.png */; };
 		2E5BEDAE19F2E36800CC60B7 /* topicGeneratorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDAD19F2E36800CC60B7 /* topicGeneratorController.swift */; };
 		2E5BEDB019F2EC4C00CC60B7 /* StatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDAF19F2EC4C00CC60B7 /* StatusController.swift */; };
-		2E5BEDBA19F30C1600CC60B7 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; };
 		2E5BEDBC19F3262400CC60B7 /* InterestTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDBB19F3262400CC60B7 /* InterestTableController.swift */; };
 		2E5BEDBE19F33BFE00CC60B7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDBD19F33BFE00CC60B7 /* LoginController.swift */; };
 		2E5BEDC019F34A6500CC60B7 /* GeoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDBF19F34A6500CC60B7 /* GeoManager.swift */; };
@@ -26,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2E56158A19F36B0B000D6166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E5BEDB119F30BF000CC60B7 /* SwiftHTTP.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BFD901519C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
 		2E5BEDB619F30BF100CC60B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2E5BEDB119F30BF000CC60B7 /* SwiftHTTP.xcodeproj */;
@@ -48,6 +56,20 @@
 			remoteInfo = thirdtimesthecharm;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2E56158C19F36B0B000D6166 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2E56158919F36B0B000D6166 /* SwiftHTTP.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2E5BEDA519F28FE500CC60B7 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5BEDBA19F30C1600CC60B7 /* SwiftHTTP.framework in Frameworks */,
+				2E56158819F36B0B000D6166 /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,10 +198,12 @@
 				2ED16F7E19F247ED007223AA /* Sources */,
 				2ED16F7F19F247ED007223AA /* Frameworks */,
 				2ED16F8019F247ED007223AA /* Resources */,
+				2E56158C19F36B0B000D6166 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2E56158B19F36B0B000D6166 /* PBXTargetDependency */,
 			);
 			name = thirdtimesthecharm;
 			productName = thirdtimesthecharm;
@@ -215,6 +239,7 @@
 				TargetAttributes = {
 					2ED16F8119F247ED007223AA = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = DYUHC775K9;
 					};
 					2ED16F9A19F247ED007223AA = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -314,6 +339,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2E56158B19F36B0B000D6166 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftHTTP;
+			targetProxy = 2E56158A19F36B0B000D6166 /* PBXContainerItemProxy */;
+		};
 		2ED16F9D19F247ED007223AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2ED16F8119F247ED007223AA /* thirdtimesthecharm */;

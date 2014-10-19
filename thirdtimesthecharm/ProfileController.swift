@@ -40,9 +40,9 @@ class ProfileController: UIViewController {
     var interestController:InterestTableController! = nil
     var editToggle = true
     var bioMessage = "Enter a cute little tidbit about yourself!"
-    var interests = ["Coding", "THE Hawkeyes", "Puppies", "Puns", "Food", "Mountain Biking", "Golfing", "Judo", "Music", "Napping"]
-    var interestValues = [false,false,false,false,false,false,false,false,false,false]
-
+    var interests = [ "Hawkeyes", "Coding", "Mountain Biking","Music","Napping In Public","Golf","Rock Climbing", "Puns", "Dancing",   "Food", "Water" ]
+    var interestValues = [false,false,false,false,false,false,false,false,false,false, false]
+//    var array = [hawkeyeButton,codeButton, bikingButton, musicButton,waterButton,foodButton,danceButton,rockButton,punsButton,]
     
     var dataFromInterest:String = ""
 
@@ -65,6 +65,7 @@ class ProfileController: UIViewController {
             statusText.enabled = true
             hahaLabel.hidden = true
             scrollView.hidden = false
+            
 
         
         }
@@ -77,6 +78,10 @@ class ProfileController: UIViewController {
             bioMessage = statusText.text
             hahaLabel.text = bioMessage
             scrollView.hidden = true
+            for ( Int i = 0; i< interests.length; i++)
+            {
+                if(
+            }
         }
         editToggle = !editToggle
     }
