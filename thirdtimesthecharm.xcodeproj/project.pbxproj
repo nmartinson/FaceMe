@@ -15,7 +15,6 @@
 		2E5BEDAC19F2B23000CC60B7 /* glyphicons_0_eye_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BEDAB19F2B23000CC60B7 /* glyphicons_0_eye_close.png */; };
 		2E5BEDAE19F2E36800CC60B7 /* topicGeneratorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDAD19F2E36800CC60B7 /* topicGeneratorController.swift */; };
 		2E5BEDB019F2EC4C00CC60B7 /* StatusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDAF19F2EC4C00CC60B7 /* StatusController.swift */; };
-		2E5BEDBA19F30C1600CC60B7 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; };
 		2E5BEDBC19F3262400CC60B7 /* InterestTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDBB19F3262400CC60B7 /* InterestTableController.swift */; };
 		2E5BEDBE19F33BFE00CC60B7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDBD19F33BFE00CC60B7 /* LoginController.swift */; };
 		2E5BEDC019F34A6500CC60B7 /* GeoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDBF19F34A6500CC60B7 /* GeoManager.swift */; };

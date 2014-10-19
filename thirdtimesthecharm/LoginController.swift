@@ -16,7 +16,7 @@ class LoginController: UIViewController
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var submitButton: UIButton!
-    let url = "http://hackwar.mybluemix.net/login?username="
+    let url = "http://hackwar.mybluemix.net/Login?username="
     var activityIndicator:UIActivityIndicatorView? = nil
 
     
