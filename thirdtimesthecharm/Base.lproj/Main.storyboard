@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ERP-ZR-ll6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ERP-ZR-ll6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -271,6 +270,20 @@
                                     <action selector="randomPressed:" destination="VPC-PV-puV" eventType="touchUpInside" id="0IV-Xn-jvQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4F-wn-gmV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Get coordinates">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="88" y="288" width="145" height="42"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendCoordinates:" destination="VPC-PV-puV" eventType="touchUpInside" id="Xxe-06-xAo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -282,6 +295,7 @@
                                 <exclude reference="Hfl-Wr-PWg"/>
                                 <exclude reference="3ap-uf-RFb"/>
                                 <exclude reference="efL-Oh-QuM"/>
+                                <exclude reference="A4F-wn-gmV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -293,11 +307,13 @@
                                 <include reference="Hfl-Wr-PWg"/>
                                 <include reference="3ap-uf-RFb"/>
                                 <include reference="efL-Oh-QuM"/>
+                                <include reference="A4F-wn-gmV"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="getCoordinates" destination="A4F-wn-gmV" id="QcP-oh-v7R"/>
                         <outlet property="randomButton" destination="efL-Oh-QuM" id="Vg3-Lb-4UM"/>
                         <outlet property="statusLabel" destination="eDA-Np-XWh" id="XHV-hc-8Wt"/>
                     </connections>
@@ -1009,18 +1025,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4F-wn-gmV">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Get coordinates">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="99" y="161" width="110" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="sendDatas:" destination="FvX-gp-mHF" eventType="touchUpInside" id="HxN-cd-N2w"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dC-uw-W8S">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1034,20 +1038,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="A4F-wn-gmV"/>
                                 <exclude reference="9dC-uw-W8S"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="A4F-wn-gmV"/>
                                 <include reference="9dC-uw-W8S"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="label" destination="9dC-uw-W8S" id="hJl-8T-H7S"/>
-                        <outlet property="sendButton" destination="A4F-wn-gmV" id="Xvl-2g-6ll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFH-4n-T0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
