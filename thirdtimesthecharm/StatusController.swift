@@ -20,8 +20,13 @@ class StatusController: UIViewController {
     }
     //play with this for cool messages
     @IBAction func randomPressed(sender: AnyObject) {
-        var alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
+		var my_message = randomString()
+        var alert = UIAlertController(title: "Alert", message: my_message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
+	func randomString() ->String {
+		
+		return "WHOHHHH"
+	}
 }

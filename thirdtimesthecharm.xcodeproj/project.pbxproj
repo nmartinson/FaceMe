@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BB931C019F36BED0024A457 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; };
+		2BB931C119F36BED0024A457 /* SwiftHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BEDB719F30BF100CC60B7 /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2E5BEDA619F28FE500CC60B7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA519F28FE500CC60B7 /* TableViewController.swift */; };
 		2E5BEDA819F2963A00CC60B7 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA719F2963A00CC60B7 /* ProfileController.swift */; };
 		2E5BEDAA19F2AAC700CC60B7 /* glyphicons_0_eye_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BEDA919F2AAC700CC60B7 /* glyphicons_0_eye_open.png */; };
@@ -26,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2BB931C219F36BED0024A457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E5BEDB119F30BF000CC60B7 /* SwiftHTTP.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BFD901519C8D8B500DD99B6;
+			remoteInfo = SwiftHTTP;
+		};
 		2E5BEDB619F30BF100CC60B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2E5BEDB119F30BF000CC60B7 /* SwiftHTTP.xcodeproj */;
@@ -48,6 +57,20 @@
 			remoteInfo = thirdtimesthecharm;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2BB931C419F36BED0024A457 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2BB931C119F36BED0024A457 /* SwiftHTTP.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2E5BEDA519F28FE500CC60B7 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BB931C019F36BED0024A457 /* SwiftHTTP.framework in Frameworks */,
 				2E5BEDBA19F30C1600CC60B7 /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,10 +200,12 @@
 				2ED16F7E19F247ED007223AA /* Sources */,
 				2ED16F7F19F247ED007223AA /* Frameworks */,
 				2ED16F8019F247ED007223AA /* Resources */,
+				2BB931C419F36BED0024A457 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2BB931C319F36BED0024A457 /* PBXTargetDependency */,
 			);
 			name = thirdtimesthecharm;
 			productName = thirdtimesthecharm;
@@ -315,6 +341,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2BB931C319F36BED0024A457 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftHTTP;
+			targetProxy = 2BB931C219F36BED0024A457 /* PBXContainerItemProxy */;
+		};
 		2ED16F9D19F247ED007223AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2ED16F8119F247ED007223AA /* thirdtimesthecharm */;
