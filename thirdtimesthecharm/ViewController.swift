@@ -20,11 +20,11 @@ class ViewController: UIViewController {
 	var detailItem = 1
     let urlString = "http://hackwar.mybluemix.net/PingLocation?username=data&lon=5&lat=6"
     
-    lazy var geoManager = GeoManager.sharedInstance
+    var geoManager = GeoManager.sharedInstance
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        self.geoManager.start()
+        geoManager.startStandardUpdates()
 
 	}
 	
